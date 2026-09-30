@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | TravelToConnect</title>
+
+    <meta name="description" content="Contact TravelToConnect for travel information, destination guides, holiday ideas, visa resources and general travel-related enquiries.">
+
+    <meta name="keywords" content="Contact TravelToConnect, travel information, travel enquiries, holiday information, visa resources">
+
+    <meta name="author" content="TravelToConnect">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #263238;
+            background: #f7fbfb;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5eeee;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 700;
+            color: #008c8c;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #263238;
+            font-size: 15px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #008c8c;
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(0, 65, 65, 0.72),
+                    rgba(0, 95, 95, 0.72)
+                ),
+                url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+            color: #ffffff;
+            padding: 100px 7%;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.30);
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            font-size: 18px;
+            color: #f0ffff;
+        }
+
+        /* GENERAL */
+
+        .container {
+            width: 86%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 75px 0;
+        }
+
+        /* CONTACT AREA */
+
+        .contact-section {
+            background: #ffffff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 45px;
+            align-items: stretch;
+        }
+
+        /* CONTACT INFORMATION */
+
+        .contact-info {
+            background: #eefafa;
+            border-radius: 15px;
+            padding: 38px;
+            border: 1px solid #deeeee;
+        }
+
+        .contact-info h2 {
+            font-size: 30px;
+            line-height: 1.3;
+            margin-bottom: 14px;
+        }
+
+        .contact-info > p {
+            color: #607d83;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 18px 0;
+            border-top: 1px solid #d6e7e7;
+        }
+
+        .contact-item:first-of-type {
+            border-top: none;
+        }
+
+        .contact-icon {
+            width: 43px;
+            height: 43px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            color: #008c8c;
+            border-radius: 50%;
+            font-weight: 700;
+        }
+
+        .contact-item h3 {
+            font-size: 17px;
+            margin-bottom: 3px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: #607d83;
+            font-size: 15px;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            color: #008c8c;
+        }
+
+        /* CONTACT FORM */
+
+        .contact-form {
+            background: #ffffff;
+            border: 1px solid #e1eeee;
+            border-radius: 15px;
+            padding: 38px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+        }
+
+        .contact-form h2 {
+            font-size: 30px;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        .contact-form-intro {
+            color: #607d83;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 19px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d7e5e5;
+            border-radius: 7px;
+            background: #fbfdfd;
+            color: #263238;
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #008c8c;
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            border: none;
+            background: #008c8c;
+            color: #ffffff;
+            padding: 13px 27px;
+            border-radius: 7px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background: #007575;
+        }
+
+        /* TOPICS */
+
+        .topics-section {
+            background: #f7fbfb;
+        }
+
+        .section-heading {
+            max-width: 780px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            font-size: 33px;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #607d83;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .topic-card {
+            background: #ffffff;
+            border: 1px solid #e3eeee;
+            border-radius: 12px;
+            padding: 27px 20px;
+            text-align: center;
+        }
+
+        .topic-card h3 {
+            font-size: 18px;
+            margin-bottom: 9px;
+        }
+
+        .topic-card p {
+            color: #607d83;
+            font-size: 14px;
+        }
+
+        /* NOTICE */
+
+        .notice-section {
+            background: #eefafa;
+            padding: 45px 0;
+        }
+
+        .notice-box {
+            background: #ffffff;
+            border: 1px solid #dceeee;
+            border-radius: 13px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .notice-box h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .notice-box p {
+            max-width: 820px;
+            margin: auto;
+            color: #607d83;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #008c8c;
+            color: #ffffff;
+            text-align: center;
+            padding: 70px 7%;
+        }
+
+        .cta h2 {
+            font-size: 34px;
+            margin-bottom: 13px;
+        }
+
+        .cta p {
+            max-width: 720px;
+            margin: 0 auto 27px;
+            color: #efffff;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #008c8c;
+            padding: 13px 26px;
+            border-radius: 7px;
+            font-weight: 700;
+        }
+
+        .cta-btn:hover {
+            background: #eafafa;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #17272b;
+            color: #d9e4e6;
+            padding: 50px 7% 25px;
+        }
+
+        .footer-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 45px;
+            margin-bottom: 35px;
+        }
+
+        footer h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #b8c8cc;
+            max-width: 500px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+            color: #b8c8cc;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1150px;
+            margin: auto;
+            border-top: 1px solid #314448;
+            padding-top: 20px;
+            text-align: center;
+            color: #9fb1b5;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 950px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 17px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 27px 23px;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .nav-links {
+                font-size: 13px;
+                gap: 13px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .cta h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        TravelToConnect
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="services.html">
+                Services
+            </a>
+        </li>
+
+        <li>
+            <a href="blogs.html">
+                Blogs
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                About Us
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            Get in Touch
+        </span>
+
+        <h1>
+            Contact TravelToConnect
+        </h1>
+
+        <p>
+            Have a travel-related question or want to learn more
+            about our resources? Get in touch with TravelToConnect.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+
+<section class="section contact-section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h2>
+                    Let's Connect
+                </h2>
+
+                <p>
+                    TravelToConnect is here to help you find useful
+                    travel information, destination inspiration,
+                    holiday resources and visa-related guides.
+                </p>
+
+
+                <!-- PHONE -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <a href="tel:+917300007075">
+                            +91 73000 07075
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        @
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <a href="mailto:info@travelsagaholidays.in">
+                            info@travelsagaholidays.in
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WEBSITE -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        W
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Website
+                        </h3>
+
+                        <p>
+                            TravelToConnect
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GENERAL ENQUIRY -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ?
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            General Enquiries
+                        </h3>
+
+                        <p>
+                            Travel guides, holiday ideas,
+                            visa resources and general travel information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+                <h2>
+                    Send Us a Message
+                </h2>
+
+                <p class="contact-form-intro">
+                    Fill in the form below and share your enquiry with us.
+                </p>
+
+
+                <form
+                    action="mailto:info@travelsagaholidays.in"
+                    method="post"
+                    enctype="text/plain"
+                >
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="Name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="Email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="topic">
+                            Enquiry Type
+                        </label>
+
+                        <select
+                            id="topic"
+                            name="Enquiry Type"
+                        >
+
+                            <option value="General Travel Information">
+                                General Travel Information
+                            </option>
+
+                            <option value="Dubai Tour Packages">
+                                Dubai Tour Packages
+                            </option>
+
+                            <option value="International Tourist Visa">
+                                International Tourist Visa
+                            </option>
+
+                            <option value="Travel Guides">
+                                Travel Guides
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="Message"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TOPICS -->
+
+<section class="section topics-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                What Can We Help You Explore?
+            </h2>
+
+            <p>
+                Browse our main travel resource categories or contact
+                us if you have a general enquiry.
+            </p>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <h3>
+                    Dubai Travel
+                </h3>
+
+                <p>
+                    Explore Dubai tour package resources and
+                    holiday planning ideas.
+                </p>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <h3>
+                    Visa Resources
+                </h3>
+
+                <p>
+                    Research international tourist visa resources
+                    for Indian travelers.
+                </p>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <h3>
+                    Travel Guides
+                </h3>
+
+                <p>
+                    Discover destination information and practical
+                    travel planning resources.
+                </p>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <h3>
+                    Holiday Ideas
+                </h3>
+
+                <p>
+                    Find inspiration for couples, families,
+                    groups and international travelers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NOTICE -->
+
+<section class="notice-section">
+
+    <div class="container">
+
+        <div class="notice-box">
+
+            <h2>
+                Important Travel Information
+            </h2>
+
+            <p>
+                Travel requirements, visa rules, entry conditions,
+                schedules and other travel details can change.
+                Always verify current requirements with relevant
+                official authorities or service providers before
+                making travel arrangements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Continue Exploring TravelToConnect
+    </h2>
+
+    <p>
+        Discover destination guides, Dubai holiday resources,
+        international tourist visa information and useful
+        travel ideas.
+    </p>
+
+    <a href="services.html" class="cta-btn">
+        Explore Travel Resources
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h3>
+                TravelToConnect
+            </h3>
+
+            <p>
+                TravelToConnect is a travel information platform
+                sharing destination guides, holiday ideas, travel
+                tips, visa resources and practical travel insights
+                to help travelers plan their journeys.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blogs.html">
+                        Blogs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Explore
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="services.html">
+                        Dubai Tour Packages
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Tourist Visa Resources
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blogs.html">
+                        Travel Guides
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        Travel Inspiration
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 TravelToConnect. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+</body>
+</html>

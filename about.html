@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | TravelToConnect</title>
+
+    <meta name="description" content="Learn about TravelToConnect, a travel information platform sharing destination guides, Dubai holiday ideas, visa resources and practical travel tips.">
+
+    <meta name="keywords" content="About TravelToConnect, Travel Guides, Dubai Travel, Holiday Ideas, International Tourist Visa, Travel Tips">
+
+    <meta name="author" content="TravelToConnect">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #263238;
+            background: #f7fbfb;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e5eeee;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 700;
+            color: #008c8c;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #263238;
+            font-size: 15px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #008c8c;
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(0, 65, 70, 0.75),
+                    rgba(0, 95, 95, 0.72)
+                ),
+                url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+
+            color: #ffffff;
+            padding: 105px 7%;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.30);
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 18px;
+            color: #f0ffff;
+        }
+
+        /* COMMON */
+
+        .container {
+            width: 86%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 75px 0;
+        }
+
+        .section-heading {
+            max-width: 780px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            line-height: 1.3;
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: #607d83;
+        }
+
+        /* ABOUT INTRO */
+
+        .about-intro {
+            background: #ffffff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .about-image img {
+            display: block;
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .about-content h2 {
+            font-size: 34px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #607d83;
+            margin-bottom: 17px;
+        }
+
+        .text-link {
+            display: inline-block;
+            color: #008c8c;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .text-link:hover {
+            text-decoration: underline;
+        }
+
+        /* MISSION */
+
+        .mission-section {
+            background: #f7fbfb;
+        }
+
+        .mission-box {
+            max-width: 950px;
+            margin: auto;
+            background: #ffffff;
+            border: 1px solid #e2eeee;
+            border-radius: 15px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 7px 24px rgba(0,0,0,0.04);
+        }
+
+        .mission-box h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .mission-box p {
+            color: #607d83;
+            font-size: 17px;
+        }
+
+        /* VALUES */
+
+        .values-section {
+            background: #ffffff;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .value-card {
+            background: #f8fbfb;
+            border: 1px solid #e5eeee;
+            border-radius: 13px;
+            padding: 32px 27px;
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+        }
+
+        .value-number {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f7f7;
+            color: #008c8c;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .value-card p {
+            color: #607d83;
+            font-size: 15px;
+        }
+
+        /* COVERAGE */
+
+        .coverage-section {
+            background: #eefafa;
+        }
+
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .coverage-card {
+            background: #ffffff;
+            border: 1px solid #e2eeee;
+            border-radius: 13px;
+            padding: 30px;
+        }
+
+        .coverage-card h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .coverage-card p {
+            color: #607d83;
+            margin-bottom: 16px;
+        }
+
+        .coverage-card a {
+            color: #008c8c;
+            font-weight: 700;
+        }
+
+        .coverage-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* INFORMATION NOTE */
+
+        .notice-section {
+            background: #ffffff;
+        }
+
+        .notice-box {
+            max-width: 950px;
+            margin: auto;
+            padding: 30px;
+            border-left: 4px solid #008c8c;
+            background: #eefafa;
+            border-radius: 8px;
+        }
+
+        .notice-box h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .notice-box p {
+            color: #526b70;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #008c8c;
+            color: #ffffff;
+            text-align: center;
+            padding: 75px 7%;
+        }
+
+        .cta h2 {
+            font-size: 35px;
+            margin-bottom: 13px;
+        }
+
+        .cta p {
+            max-width: 720px;
+            margin: 0 auto 27px;
+            color: #efffff;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #008c8c;
+            padding: 13px 26px;
+            border-radius: 7px;
+            font-weight: 700;
+        }
+
+        .cta-btn:hover {
+            background: #eafafa;
+        }
+
+        .cta-btn-outline {
+            display: inline-block;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 7px;
+            font-weight: 700;
+        }
+
+        .cta-btn-outline:hover {
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #17272b;
+            color: #d9e4e6;
+            padding: 50px 7% 25px;
+        }
+
+        .footer-grid {
+            max-width: 1150px;
+            margin: 0 auto 35px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 45px;
+        }
+
+        footer h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #b8c8cc;
+            max-width: 500px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+            color: #b8c8cc;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1150px;
+            margin: auto;
+            border-top: 1px solid #314448;
+            padding-top: 20px;
+            text-align: center;
+            color: #9fb1b5;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 17px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .section-heading h2,
+            .about-content h2 {
+                font-size: 29px;
+            }
+
+            .values-grid,
+            .coverage-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-box {
+                padding: 30px 23px;
+            }
+
+            .mission-box h2 {
+                font-size: 27px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .nav-links {
+                gap: 13px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .about-image img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+        TravelToConnect
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="blogs.html">Blogs</a>
+        </li>
+
+        <li>
+            <a href="about.html" class="active">About Us</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            Get to Know Us
+        </span>
+
+        <h1>
+            About TravelToConnect
+        </h1>
+
+        <p>
+            Connecting travelers with destination inspiration,
+            practical travel information, holiday ideas and useful
+            resources for journeys around the world.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT INTRODUCTION -->
+
+<section class="section about-intro">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85"
+                    alt="Travelers exploring a destination"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h2>
+                    Making Travel Discovery Simpler
+                </h2>
+
+                <p>
+                    TravelToConnect is a travel information platform
+                    created for people who want to discover new
+                    destinations, explore holiday ideas and prepare
+                    for their journeys with useful information.
+                </p>
+
+                <p>
+                    We bring together destination guides, travel tips,
+                    international tourist visa resources and holiday
+                    inspiration to help travelers research their
+                    options before making travel plans.
+                </p>
+
+                <p>
+                    Whether you are considering a Dubai getaway,
+                    researching an international destination or
+                    looking for practical trip-planning information,
+                    TravelToConnect offers a starting point for
+                    your travel research.
+                </p>
+
+                <a href="services.html" class="text-link">
+                    Explore Our Travel Resources →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR PURPOSE -->
+
+<section class="section mission-section">
+
+    <div class="container">
+
+        <div class="mission-box">
+
+            <h2>
+                Our Purpose
+            </h2>
+
+            <p>
+                Our purpose is to make travel information easier
+                to explore and understand. TravelToConnect brings
+                destination inspiration, holiday ideas, visa resources
+                and practical travel guidance together so travelers
+                can research possibilities and plan their next
+                journeys with greater confidence.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR APPROACH -->
+
+<section class="section values-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                What Guides TravelToConnect
+            </h2>
+
+            <p>
+                We focus on useful travel information that supports
+                travelers as they explore destinations and prepare
+                for their trips.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    01
+                </div>
+
+                <h3>
+                    Destination Inspiration
+                </h3>
+
+                <p>
+                    Discover travel destinations, attractions,
+                    holiday possibilities and ideas for different
+                    types of journeys.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    02
+                </div>
+
+                <h3>
+                    Practical Travel Information
+                </h3>
+
+                <p>
+                    Explore useful travel tips and planning
+                    information that can help you prepare for
+                    different stages of a journey.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-number">
+                    03
+                </div>
+
+                <h3>
+                    Helpful Travel Resources
+                </h3>
+
+                <p>
+                    Find destination guides, holiday resources
+                    and visa-related information in one
+                    convenient place.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHAT WE COVER -->
+
+<section class="section coverage-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                What You Can Explore
+            </h2>
+
+            <p>
+                TravelToConnect covers a range of travel topics
+                for people researching their next holiday or
+                international journey.
+            </p>
+
+        </div>
+
+
+        <div class="coverage-grid">
+
+
+            <div class="coverage-card">
+
+                <h3>
+                    Dubai Holiday Ideas
+                </h3>
+
+                <p>
+                    Explore Dubai tour package resources, itinerary
+                    ideas and holiday options for couples, families,
+                    groups and other travelers.
+                </p>
+
+                <a href="services.html">
+                    Explore Dubai Resources →
+                </a>
+
+            </div>
+
+
+            <div class="coverage-card">
+
+                <h3>
+                    International Tourist Visa Resources
+                </h3>
+
+                <p>
+                    Research tourist visa information for
+                    international destinations and learn about
+                    the documentation and requirements travelers
+                    may need to check.
+                </p>
+
+                <a href="services.html">
+                    Explore Visa Resources →
+                </a>
+
+            </div>
+
+
+            <div class="coverage-card">
+
+                <h3>
+                    Destination Guides
+                </h3>
+
+                <p>
+                    Find travel inspiration and destination
+                    information to help you research places
+                    you may want to visit.
+                </p>
+
+                <a href="blogs.html">
+                    Read Travel Guides →
+                </a>
+
+            </div>
+
+
+            <div class="coverage-card">
+
+                <h3>
+                    Travel Tips and Planning
+                </h3>
+
+                <p>
+                    Explore practical travel ideas, holiday
+                    planning resources and helpful information
+                    for preparing for a trip.
+                </p>
+
+                <a href="blogs.html">
+                    Discover Travel Tips →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INFORMATION NOTICE -->
+
+<section class="section notice-section">
+
+    <div class="container">
+
+        <div class="notice-box">
+
+            <h3>
+                A Note About Travel Information
+            </h3>
+
+            <p>
+                Travel information, visa requirements, entry
+                conditions, documentation rules and travel policies
+                can change. Information on TravelToConnect is intended
+                for general research and planning. Always verify
+                current requirements with the relevant official
+                authorities and service providers before making
+                travel decisions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Let Your Next Journey Begin
+    </h2>
+
+    <p>
+        Explore destination ideas, holiday resources and practical
+        travel information to help you prepare for your next trip.
+    </p>
+
+    <div class="cta-buttons">
+
+        <a href="services.html" class="cta-btn">
+            Explore Services
+        </a>
+
+        <a href="blogs.html" class="cta-btn-outline">
+            Read Travel Blogs
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>
+                TravelToConnect
+            </h3>
+
+            <p>
+                TravelToConnect is a travel information platform
+                sharing destination guides, holiday ideas, travel
+                tips, visa resources and practical travel insights
+                to help travelers plan their journeys.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="blogs.html">Blogs</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Explore
+            </h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="services.html">Dubai Packages</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Visa Resources</a>
+                </li>
+
+                <li>
+                    <a href="blogs.html">Travel Guides</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 TravelToConnect. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+</body>
+</html>
